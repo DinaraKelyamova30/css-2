@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari|Noto+Sans+KR&display=swap');
+
+:root {
+    --logo-color: blue;
+    --font-color: black;
+    font-family: "Manjari";
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+header nav .logo {
+    font-family: 'Noto+Sans+KR';
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--logo-color);
+}
+
+header nav .menu {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+header nav .menu li a{
+    text-decoration: none;
+    color: url(--font-color);
+    text-transform: uppercase;
+}
+
+header nav .menu li a:hovor{
+
+
+}
+
+@media (min-width: 500px;) {
+    header nav{
+        display: flex;
+    }
+}
+
+header .banner {
+    background-image: url(../img/eat.ipg);
+    
+}
