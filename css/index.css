@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Manjari|Noto+Sans+KR&display=swap');
 
 :root {
-    --logo-color: blue;
+    --accent-color: #fcba03;
     --font-color: black;
     font-family: "Manjari";
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 }
 
 header nav .logo {
-    font-family: 'Noto+Sans+KR';
+    font-family:  "Manjari";
     font-size: 3rem;
     margin: 1rem 0;
     text-align: center;
@@ -29,22 +30,73 @@ header nav .menu {
 
 header nav .menu li a{
     text-decoration: none;
-    color: url(--font-color);
+    color: var(--font-color);
     text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 3px;
 }
 
-header nav .menu li a:hovor{
-
-
+header nav .menu li a:hover{
+    border: 1px solid var(--accent-color);
 }
 
-@media (min-width: 500px;) {
+@media (min-width: 600px) {
     header nav{
         display: flex;
+        align-items: center;
+    }
+
+    header nav .menu{
+        flex: 1;
     }
 }
 
 header .banner {
-    background-image: url(../img/eat.ipg);
-    
+    background-image: url(../img/eat.jpg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .banner .h1 {
+    font-family: 'Manjari';
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+main .product img{
+    width: 100%;
+    d
+}
+
+main .product .product-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (min-width: 600px) {
+    main .product-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+
+@media (min-width: 900px) {
+    main .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 980px) {
+    main .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
